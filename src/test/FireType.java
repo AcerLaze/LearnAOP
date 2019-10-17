@@ -4,7 +4,13 @@ public class FireType extends Character{
 	
 	public FireType(){
 		
-		super("Mokou");
+		this.setType("Fire");
+		
+	}
+	
+	public FireType(String name, double strength, double intelligence, double hp, double defense){
+		
+		super(name, strength, intelligence, hp, defense);
 		this.setType("Fire");
 		
 	}

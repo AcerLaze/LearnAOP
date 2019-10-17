@@ -1,6 +1,6 @@
 package test;
 
-public class Character {
+public abstract class Character {
 
 	private String name;
 	private double strength;
@@ -11,7 +11,14 @@ public class Character {
 	
 	public Character(){}
 	
-	public Character(String name){this.name = name;}
+	public Character(String name, double strength, double intelligence, double hp, double defense){
+		this.name = name;
+		this.strength = strength;
+		this.intelligence = intelligence;
+		this.hp = hp;
+		this.defense = defense;
+		
+	}
 
 	public String getName() {
 		return name;
@@ -79,10 +86,6 @@ public class Character {
 		
 	}
 
-	public double atkModifier(Character enemy){
-		
-		return 1;
-		
-	}
+	public abstract double atkModifier(Character enemy);
 
 }
